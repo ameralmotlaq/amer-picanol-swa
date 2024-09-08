@@ -30,6 +30,28 @@
   <script type="text/javascript">
     appInsights.trackEvent({name:"WinGame"});
     appInsights.trackMetric({name: "queueLength", average: 42});
+
+    appInsights.trackTrace({
+    message: "my custom trace from JS"   
+});
+
+    appInsights.trackEvent({
+  name: 'some event',
+  properties: { // accepts any type
+    prop1: 'string',
+    prop2: 123.45,
+    prop3: { nested: 'objects are okay too' }
+  }
+});
+
+    appInsights.trackPageView({
+  name: 'some page',
+  properties: { // accepts any type
+    prop1: 'string',
+    prop2: 123.45,
+    prop3: { nested: 'objects are okay too' }
+  }
+});
   </script>
 </body>
 
